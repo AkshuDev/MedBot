@@ -35,12 +35,12 @@ if (is_file($data)) {
   if (is_array($j)) $latest = $j;
 }
 ?>
-<!doctype html>
+<!DOCTYPE html>
 <html lang="en">
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width,initial-scale=1">
-<title>MedBot — Live Environment</title>
+<title>Medbot — Live Environment</title>
 <meta name="theme-color" content="#0e1525">
 <style>
   :root {
@@ -112,7 +112,7 @@ if (is_file($data)) {
   <div class="card">
     <header>
       <div>
-        <h1>🌡️ MedBot — Live Environment</h1>
+        <h1>MedBot — Live Environment</h1>
         <div class="sub">Auto-refresh every <span id="every">2</span>s • Control follow mode below</div>
       </div>
       <div class="controls">
@@ -140,6 +140,7 @@ if (is_file($data)) {
       <div class="consoleCtrl">
         <button id="jumpEnd">Jump to end</button>
         <button id="pauseBtn">Pause</button>
+        <button id="clearBtn">Clear</button>
       </div>
     </div>
 
@@ -240,6 +241,10 @@ if (is_file($data)) {
     }catch(e){}
   }
 
+  async function clearConsole() {
+    try {
+      
+
   document.getElementById('toggleMode').addEventListener('click', toggleMode);
   document.getElementById('resetFinish').addEventListener('click', resetFinish);
 
@@ -250,3 +255,4 @@ if (is_file($data)) {
 </script>
 </body>
 </html>
+
